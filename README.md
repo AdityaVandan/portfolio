@@ -1,4 +1,4 @@
-### portfolio2020
+# portfolio2020
 Online Profile
 
 
@@ -7,6 +7,6 @@ Online Profile
 
 
 
-# Technologies used:
+### Technologies used:
 1. Spring
 2. Angular
