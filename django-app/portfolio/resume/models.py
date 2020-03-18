@@ -1,13 +1,16 @@
 from django.db import models
 
 # Create your models here.
+
+
+#don't forget to write important __str__ function for each
 class School(models.Model):
     name=models.CharField(max_length=200)
     degree=models.CharField(max_length=100)
     start=models.DateField()
     end=models.DateField()
-    marks_type=models.CharField()
-    marks=models.CharField()
+    marks_type=models.CharField(max_length=20)
+    marks=models.FloatField()
 
 class Skill(models.Model):
     name=models.CharField(max_length=100)
@@ -37,7 +40,7 @@ class Project(models.Model):
 
 class Technology(models.Model):
     name=models.CharField(max_length=100)
-    imagePath=model.CharField(max_length=2048)
+    imagePath=models.CharField(max_length=2048)
 
 class ScreenShot(models.Model):
     project_id=models.ForeignKey(Project,on_delete=models.CASCADE)
