@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'resume.apps.ResumeConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,13 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'portfoliodb',
+        'USER':'aditya',
+        'PASSWORD':'aditya',
+        'HOST':'localhost',
+        'PORT':'3306',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
