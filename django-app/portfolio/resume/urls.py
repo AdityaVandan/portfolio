@@ -20,4 +20,5 @@ from . import views
 app_name="resume"
 urlpatterns = [
     path('getExperience/',views.getExperience),
+    path('getInfo/',views.getInfo),
 ]
